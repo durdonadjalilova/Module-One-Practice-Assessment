@@ -8,6 +8,13 @@
  */
 
 
-function sumOfValuesOfObject(){}
+function sumOfValuesOfObject(obj){
+    let sum = 0
+    let objValues = Object.values(obj)
+    objValues.forEach((el) => {
+        sum += el
+    })
+    return sum
+}
 
 module.exports = sumOfValuesOfObject;

@@ -7,6 +7,26 @@
  * returns 8
  */
 
-function thirdLargest() {}
+function thirdLargest(nums) {
+    let thirdLarge = -Infinity
+    let largest = -Infinity
+    let secondLargest = -Infinity
+   for(let i = 0; i < nums.length; i++) {
+       let el = nums[i]
+       if(nums.length < 3) {
+           return null
+       } else if(el > largest) {
+            thirdLarge = secondLargest
+            secondLargest = largest
+            largest = el
+        } else if(el > secondLargest) {
+            thirdLarge = secondLargest
+            secondLargest = el 
+        } else if(el > thirdLarge) {
+            thirdLarge = el
+        }
+    }
+    return thirdLarge
+}
 
 module.exports = thirdLargest

@@ -17,6 +17,10 @@
 ]
  */
 
-function sortPeopleByAge() {}
+function sortPeopleByAge(people) {
+  return people.sort((a, b) => {
+    return a.age - b.age
+  })
+}
 
 module.exports = sortPeopleByAge;

@@ -8,6 +8,16 @@
  *  
  */
 
-function numberIncludes0() {}
+function numberIncludes0(num) {
+    let newStr = '' + num
+    let newArr = newStr.split("")
+    for(i = 0; i < newArr.length; i++) {
+    if(newArr[i] === "0") {
+        return true
+    } else {
+    }
+}
+return false
+}
 
 module.exports = numberIncludes0;
